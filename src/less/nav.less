@@ -1,0 +1,58 @@
+@import "partials/mixins";
+@import "partials/params";
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: @nav-height;
+
+    & .left {
+
+       & i {
+         position: relative;
+         top: 6px;
+         font-size: 25px;
+         cursor: pointer;
+         margin-right: 20px;
+
+         & > svg {
+           width: 25px;
+           height: 25px;
+         }
+       }
+
+      & span {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    & .right {
+      display: flex;
+
+        & .phone {
+          margin-right: 25px;
+          padding: 5px 15px;
+          text-align: center;
+          border-radius: 10px;
+          background-color: @primary-color;
+
+            & span {
+              font-size: 14px;
+              border-bottom: 1px dotted #000;
+            }
+        }
+
+        & i {
+          position: relative;
+          top: 2px;
+          cursor: pointer;
+
+          & > svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+    }
+}
